@@ -1,10 +1,5 @@
-console.log('JS Sourced!');
-
-//activated when key(A - L) is pressed down
-window.addEventListener('keydown', playAudio);
-
+/* jshint esversion: 6*/
 function playAudio(e){
-
   //return a list of selected audio elements within the document
   //ES6 template strings/literals: `${}` - placeholder for string substitution
     const audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
@@ -25,3 +20,5 @@ function removeTransition(e){
 const keys = document.querySelectorAll('.key');
 //add transition end to each key, then run removeTransition()
 keys.forEach(key => key.addEventListener('transitionend', removeTransition))
+
+window.addEventListener('keydown', playAudio);
