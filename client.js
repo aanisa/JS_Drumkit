@@ -7,7 +7,5 @@ window.addEventListener('keydown', function(e) {
 //ES6 template strings/literals: `${}` - placeholder for string substitution
   const audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
   if (!audio) return; //stops function from running
-
-  //check if selected an actual audio element
-  console.log(audio);
+  audio.play();
 });
