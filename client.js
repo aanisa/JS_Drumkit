@@ -13,5 +13,6 @@ window.addEventListener('keydown', function(e) {
   audio.currentTime = 0;
   audio.play();
 
-  console.log(key);
+  key.classList.add('playing');
+
 });
